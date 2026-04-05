@@ -1,0 +1,171 @@
+/* General styling for the page */
+.register-page {
+  /* Set background to create the glassmorphism effect */
+  background: linear-gradient(135deg, #1f0163, #3f0183);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff; /* Default text color is white for contrast */
+}
+
+/* Glassmorphism box container */
+.register-box {
+  background: rgba(255, 255, 255, 0.15); /* Translucent white background */
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Stronger shadow for depth */
+  backdrop-filter: blur(10px); /* The key to the frosted glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle white border */
+  width: 100%;
+  max-width: 450px; /* Limit max width for better appearance */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title styling */
+.register-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Glowing effect for the title */
+}
+
+.register-title span {
+  color: #ffcc00; /* Accent color for the blog name part */
+}
+
+/* Form element styling (inputs and selects) */
+.register-box input[type="text"],
+.register-box input[type="email"],
+.register-box input[type="number"],
+.register-box input[type="password"],
+.register-box select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1); /* Very slight background for inputs */
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+  transition: background 0.3s, box-shadow 0.3s;
+  /* Glassmorphism effect for inputs */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-box input:focus,
+.register-box select:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 10px #ffcc00; /* Focus glow */
+}
+
+/* Placeholder color */
+.register-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Select element specific styling */
+.register-box select option {
+  background: #3f0183; /* Dark background for options for readability */
+  color: #fff;
+}
+
+/* File input container styling */
+.flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px; /* Spacing between preview and file input */
+}
+
+/* Photo preview styling */
+.photo-preview {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.5); /* Border around the photo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Custom file input appearance (making it look better in a glassmorphism context) */
+.register-box input[type="file"] {
+  background: none;
+  padding: 0;
+  border: none;
+  font-size: 0.9em;
+  /* Hide the default input and style the label or wrapper if needed, 
+     but keeping the native look here for simplicity in this file. */
+}
+
+/* Link/Paragraph styling */
+.register-box p {
+  font-size: 0.9em;
+  margin-bottom: 25px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.register-box p a {
+  color: #ffcc00; /* Accent color for links */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.register-box p a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Register Button Styling */
+.register-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #ffcc00; /* Accent color for the button */
+  color: #1f0163; /* Dark text on button */
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.register-btn:hover {
+  background: #fff;
+  color: #1f0163;
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsiveness adjustments (Optional but recommended) */
+@media (max-width: 500px) {
+  .register-box {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  .register-title {
+    font-size: 2em;
+  }
+  .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
